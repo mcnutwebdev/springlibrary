@@ -3,6 +3,9 @@ package com.books.repositories;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-public interface BookInterface {
+import com.books.models.Book;
 
+public interface BookInterface  extends CrudRepository<Book, Long> {
+
+	
 }
