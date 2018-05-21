@@ -51,4 +51,11 @@ public class Customer {
 		this.loans = loans;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer [cId=" + cId + ", cName=" + cName + ", loans=" + loans + "]";
+	}
+	
+	
+
 }

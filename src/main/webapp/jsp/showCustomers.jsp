@@ -5,36 +5,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Show Books</title>
+<title>Show Customers</title>
 <link href="/css/style.css" rel="stylesheet"></link>
 </head>
 <body>
 
-
-
-<h1>Show Books Page</h1>
+<h1>Customers</h1>
 	
 	<table>
 		<tr>
-			<th>Book ID</th>
-			<th>Title</th>
-			<th>Author</th>
+			<th>Customer ID</th>
+			<th>Name</th>
+			<th>Loans</th>
+			
 		</tr>
-		<c:forEach items="${book}" var="book">
+		<c:forEach items="${customer}" var="customer">
 			<tr>
-				<td>${book.bid}</td>
-				<td>${book.title}</td>
-				<td>${book.author}</td>
+				<td>${customer.cId}</td>
+				<td>${customer.cName}</td>
+				<td>loans: coming soon</td>
 			</tr>
 		</c:forEach>
 	</table>
 		
 	<a href="/">Home</a>
-
-
-
-
-
 
 
 
