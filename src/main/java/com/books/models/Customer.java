@@ -56,6 +56,4 @@ public class Customer {
 		return "Customer [cId=" + cId + ", cName=" + cName + ", loans=" + loans + "]";
 	}
 	
-	
-
 }
