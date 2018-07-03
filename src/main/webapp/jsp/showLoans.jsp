@@ -13,6 +13,27 @@
 <h1>List Loans</h1>
 	
 	<br>
+	<table>
+		<tr>
+			<th>Loan ID</th>
+			<th>Customer ID</th>
+			<th>Customer Name</th>
+			<th>Book Title</th>
+			<th>Author</th>
+			<th>Due Date</th>
+		</tr>
+		<c:forEach items="${loan}" var="loan">
+			<tr>
+				<td>${loan.lid}</td>
+				<td>${loan.cust.cId}</td>
+				<td>${loan.cust.cName}</td>
+				<td>${loan.book.title}</td>
+				<td>${loan.book.author}</td>
+				<td>${loan.dueDate}</td>
+								
+			</tr>
+		</c:forEach>
+	</table>
 		
 	<a href="/">Home</a>
 
