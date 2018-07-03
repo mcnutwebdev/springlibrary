@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<h1>Loans</h1>
+<h1>List Loans</h1>
 	
-	Loans page
+	<br>
 		
 	<a href="/">Home</a>
 

@@ -17,5 +17,9 @@ public class BookService {
 	public ArrayList<Book> listBooks() {
 		return (ArrayList<Book>) bookInterface.findAll();
 	}
+	
+	public Book save(Book book) {		
+		return bookInterface.save(book);		
+	}
 
 }
