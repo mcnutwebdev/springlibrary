@@ -18,11 +18,7 @@
 	
 	<form:form modelAttribute="customer">
  		<table>
-			<tr>
-				<td>Customer ID</td>
-				<td><form:input path="cId"></form:input></td>
-				<td><form:errors path="cId"></form:errors></td>
-			</tr>
+			
 			<tr>
 				<td>Name</td>
 				<td><form:input path="cName"></form:input></td>

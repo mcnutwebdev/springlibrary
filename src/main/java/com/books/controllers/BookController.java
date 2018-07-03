@@ -2,9 +2,12 @@ package com.books.controllers;
 
 import java.util.ArrayList;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,8 +43,9 @@ public class BookController {
 	}
 	
 	@RequestMapping(value = "/addBook", method=RequestMethod.POST)
-	public String addBookPOST(@ModelAttribute("book") Book book, Model b) {
-		
+	public String addBookPOST(@Valid @ModelAttribute("book") Book book, BindingResult result, Model b) {
+		if (result.hasErrors())
+			return "addBook";
 		bookService.save(book);
 		
 		return "redirect:showBooks";
