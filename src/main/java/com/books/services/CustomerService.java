@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.books.models.Book;
 import com.books.models.Customer;
+import com.books.models.Loan;
 import com.books.repositories.CustomerInterface;
 
 @Service

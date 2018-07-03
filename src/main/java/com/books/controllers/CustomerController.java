@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.books.models.Book;
+import com.books.models.Loan;
 import com.books.models.Customer;
 import com.books.services.CustomerService;
 

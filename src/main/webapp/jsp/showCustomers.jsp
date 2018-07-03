@@ -12,21 +12,31 @@
 
 <h1>Customers</h1>
 	
-	<table>
-		<tr>
-			<th>Customer ID</th>
-			<th>Name</th>
-			<th>Loans</th>
-			
-		</tr>
+	
 		<c:forEach items="${customer}" var="customer">
-			<tr>
-				<td>${customer.cId}</td>
-				<td>${customer.cName}</td>
-				<td>loans: coming soon</td>
-			</tr>
+			<h1>${customer.cId } ${customer.cName}<br></h1>
+			<h3>${customer.cName}'s Loans</h3>
+			
+				<table>
+				
+					<tr>
+						<th>Loan ID</th>
+						<th>Book ID</th>
+						<th>Title</th>
+						<th>Author</th>
+					</tr>
+					<c:forEach items="${customer.loans}" var="customerLoans">
+					<tr>
+						<td>${customerLoans.lid}</td>
+						<td>${customerLoans.book.bid}</td>
+						<td>${customerLoans.book.title}</td>
+						<td>${customerLoans.book.author}</td>				
+					</tr>
+					</c:forEach>
+				</table>
+			
 		</c:forEach>
-	</table>
+	
 		
 	<a href="/">Home</a>
 
