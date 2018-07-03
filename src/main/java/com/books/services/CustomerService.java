@@ -7,6 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import com.books.models.Book;
 import com.books.models.Customer;
 import com.books.repositories.CustomerInterface;
 
@@ -18,5 +19,9 @@ public class CustomerService {
 
 	public ArrayList<Customer> listCustomers() {
 		return (ArrayList<Customer>) customerInterface.findAll();
+	}
+	
+	public Customer save(Customer customer) {		
+		return customerInterface.save(customer);		
 	}
 }
