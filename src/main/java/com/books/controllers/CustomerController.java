@@ -25,5 +25,11 @@ public class CustomerController {
 
 		return "showCustomers";
 	}
+	
+	@RequestMapping(value = "/addCustomer", method = RequestMethod.GET)
+	public String addCustomer(Model m) {
+
+		return "addCustomer";
+	}
 
 }

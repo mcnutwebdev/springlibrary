@@ -18,12 +18,24 @@ public class LoanController {
 	private LoanService loanService;
 	
 	@RequestMapping(value = "/showLoans", method = RequestMethod.GET)
-	public String getLoans(Model m) {
+	public String getLoans(Model l) {
 
 		ArrayList<Loan> loan = loanService.listLoans();
-		m.addAttribute("loan", loan);
+		l.addAttribute("loan", loan);
 
 		return "showLoans";
+	}
+	
+	@RequestMapping(value = "/newLoan", method = RequestMethod.GET)
+	public String newLoan(Model l) {
+
+		return "newLoan";
+	}
+	
+	@RequestMapping(value = "/deleteLoan", method = RequestMethod.GET)
+	public String deleteLoan(Model l) {
+
+		return "deleteLoan";
 	}
 
 }

@@ -14,18 +14,25 @@ import com.books.services.BookService;
 @Controller
 public class BookController {
 
-	@Autowired 
+	@Autowired
 	private BookService bookService;
-	
-@RequestMapping(value = "/showBooks", method = RequestMethod.GET)
-	
-	public String getBooks(Model b)
-	{
+
+	@RequestMapping(value = "/showBooks", method = RequestMethod.GET)
+
+	public String getBooks(Model b) {
 		ArrayList<Book> books = bookService.listBooks();
-		
+
 		b.addAttribute("book", books);
-		
+
 		return "showBooks";
 	}
-	
+
+	@RequestMapping(value = "/addBook", method = RequestMethod.GET)
+
+	public String addBook(Model b) {
+
+		return "addBook";
+
+	}
+
 }

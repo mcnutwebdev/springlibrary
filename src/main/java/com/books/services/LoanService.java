@@ -11,13 +11,11 @@ import com.books.repositories.LoanInterface;
 @Service
 public class LoanService {
 	
-	
+	@Autowired
+	private LoanInterface loanInterface;
 
-		@Autowired
-		private LoanInterface loanInterface;
-
-		public ArrayList<Loan> listLoans() {
-			return (ArrayList<Loan>) loanInterface.findAll();
-		}
+	public ArrayList<Loan> listLoans() {
+		return (ArrayList<Loan>) loanInterface.findAll();
 	}
+}
 
