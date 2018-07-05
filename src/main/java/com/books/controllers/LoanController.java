@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.books.models.Customer;
 import com.books.models.Loan;
 import com.books.services.LoanService;
 
@@ -28,7 +29,8 @@ public class LoanController {
 	
 	@RequestMapping(value = "/newLoan", method = RequestMethod.GET)
 	public String newLoan(Model l) {
-
+		Loan loan = new Loan();
+		l.addAttribute("loan", loan);
 		return "newLoan";
 	}
 	
